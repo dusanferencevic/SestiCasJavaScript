@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Domaci2</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+var testObjekat = {
+  naziv: "Startit kurs pravljenja sajtova",
+  trajanjeNedelja: 33,
+  predavac: {
+    ime: "Petar",
+    prezime: "Popovic"
+  },
+  ocenePolaznika: [3, 2, 7, 4, 8, 1, 9, 2, 10, 10, 3, 6, 3, 1, 7, 3, 5, 4, 10, 9, 1, 9],
+  organizacija: "Startit",
+  kursJosTraje : true
+};
+
+function kolikoImaKojihOcena (objekatZaTest) 
+{
+	var nizObjekatOG = objekatZaTest.ocenePolaznika;
+	var nizObjekat2 = [];
+	for(var i=0; i<nizObjekatOG.length; i=i) 
+	{
+			var x = nizObjekatOG[i];
+			var counter = 1;
+			for(var j=i+1; j<nizObjekatOG.length; j++)
+			{
+				if (nizObjekatOG[j] === x) 
+				{
+					counter++;
+					nizObjekatOG.splice(j, 1);
+				}
+			}
+			nizObjekat2.push('{ rate_' + x + ': ' + counter + '}');
+			nizObjekatOG.splice(i, 1);
+	}
+	return console.log(nizObjekat2);
+}
+kolikoImaKojihOcena(testObjekat);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
