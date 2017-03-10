@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Domaci4</title>
+</head>
+<body>
+<script type="text/javascript">
+var people = [
+  {
+    name: 'Joe Schmoe',
+    yearsExperience: 1,
+    department: 'IT'
+  },
+  {
+    name: 'Sally Sallerson',
+    yearsExperience: 15,
+    department: 'Engineering'
+  },
+  {
+    name: 'Bill Billson',
+    yearsExperience: 5,
+    department: 'Engineering'
+  },
+  {
+    name: 'Jane Janet',
+    yearsExperience: 11,
+    department: 'Management'
+  },
+  {
+    name: 'Bob Hope',
+    yearsExperience: 9,
+    department: 'IT'
+  }
+];
+function godineIskustva(nekiTamoObjekat) 
+{
+	var ukupneGodineIskustva = 0;
+	for (var i = 0 ; i < nekiTamoObjekat.length; i++ ) 
+	{
+		ukupneGodineIskustva += nekiTamoObjekat[i].yearsExperience;
+	}
+	console.log(ukupneGodineIskustva);
+}
+godineIskustva(people);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
