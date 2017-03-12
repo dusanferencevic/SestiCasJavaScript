@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Domaci4</title>
+</head>
+<body>
+<script type="text/javascript">
+var people = [
+  {
+    name: 'Joe Schmoe',
+    yearsExperience: 1,
+    department: 'IT'
+  },
+  {
+    name: 'Sally Sallerson',
+    yearsExperience: 15,
+    department: 'Engineering'
+  },
+  {
+    name: 'Bill Billson',
+    yearsExperience: 5,
+    department: 'Engineering'
+  },
+  {
+    name: 'Jane Janet',
+    yearsExperience: 11,
+    department: 'Management'
+  },
+  {
+    name: 'Bob Hope',
+    yearsExperience: 9,
+    department: 'IT'
+  }
+];
+
+
+var exp = 
+{
+  Engineering: 0,
+  IT: 0,
+  Management: 0
+};
+
+
+function foo(objekat) 
+{
+  for(var i = 0; i < objekat.length; i++)
+  {
+    if (objekat[i].department == "IT") 
+    {
+      exp.IT+=objekat[i].yearsExperience;
+    }
+    else if (objekat[i].department == "Management") 
+    {
+      exp.Management+=objekat[i].yearsExperience;
+    }
+    else if (objekat[i].department == "Engineering") 
+    {
+      exp.Engineering+=objekat[i].yearsExperience;
+    }        
+  }
+  console.log(exp);
+}
+foo(people);
+
+
+
+
+</script>
+</body>
+</html>
